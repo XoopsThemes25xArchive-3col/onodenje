@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="general" />
+<meta name="author" content="<{$xoops_sitename}>" />
+<meta name="copyright" content="<{$meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="<{$xoops_url}>/backend.php" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body><{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<script language="JavaScript1.2">
+var bookmarkurl="<{$xoops_url}>"
+var bookmarktitle="<{$xoops_sitename}>"
+
+function addbookmark(){
+if (document.all)
+window.external.AddFavorite(bookmarkurl,bookmarktitle)
+}
+</script>
+
+
+<table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" id="okvir">
+  <tr>
+    <td> 
+      <table border="0" cellpadding="0" cellspacing="0" id="glavna">
+        <tr> 
+          <td colspan="4" id="vrh"></td>
+        </tr>
+        <tr> 
+          <td width="185" rowspan="2" id="leftcolumn"> 
+            <!-- Start left blocks loop -->
+            <div align="center"><{foreach item=block from=$xoops_lblocks}> </div>
+            <div align="center" class="<{cycle values="blockTitle"}>"><{$block.title}></div>
+            <div align="center" class="blockContent"><{$block.content}></div>
+            <div align="center"><img src="<{$xoops_imageurl}>images/160.gif" width="160" height="1" alt="" /> 
+              <{/foreach}> 
+              <!-- End left blocks loop -->
+            </div></td>
+          <td width="38" rowspan="2" valign="bottom" id="leftcolumn2"> <div align="center"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>images/dole.gif" alt="onodenje.com" border="0" align="absbottom" /></a></div></td>
+          <td width="615" align="center" valign="top" id="centercolumn"> <table width="100%">
+              <tr> 
+                <td><h1><font color="#FF9933">ONODENJE . COM</font> </h1>
+                    <{if !$xoops_isuser}>Niste se onodili!<b> <img src="<{$xoops_imageurl}>images/mess.gif" alt="logovanje" /> 
+                    </b> <a href="<{$xoops_url}>/user.php"><font color="#FF6600"><strong>UONODI 
+                    SE </strong></font></a>da bi onodio po sajt. Ako nisi jos 
+                    registrovan <img src="<{$xoops_imageurl}>images/login.gif" alt="registrovanje" /> 
+                    <a href="<{$xoops_url}>/register.php"><font color="#FF6600"><strong>Registruj 
+                    se</strong></font> </a>!<{else}> Vi ste na <strong><font color="#FF6600">ONODENJE.COM</font></strong> 
+                    <b><img src="<{$xoops_imageurl}>images/lik.gif" alt="korisnik" /></b><a href="<{$xoops_url}>/user.php"><b> 
+                    <{$xoops_uname}></b> </a> <b> <img src="<{$xoops_imageurl}>images/grom.gif" alt="ajd zdravo" /></b> 
+                    [<a href="<{$xoops_url}>/user.php?op=logout"><font color="#FF6600">Izonodi 
+                    se</font> </a>] <{/if}> <br /><div class="search_field">
+                   
+                  <form method="post" action="<{$xoops_url}>/search.php">
+                    <div class="search_form"> 
+                      <div align="center"> 
+                        <input type="text" name="query" class="search" />
+                        <input type="hidden" name="action" value="results" />
+                        <input type="submit" value="Pronadji" class="submit" />
+                        <a class="grey" href="<{$xoops_url}>/search.php">Detaljna 
+                        pretaraga </a></div>
+                    </div>
+                  </form>
+                  <hr /> </div></td>
+              </tr>
+            </table>
+            <p align="left"> 
+              <!-- Display center blocks if any -->
+              <{if $xoops_showcblock == 1}></p>
+            <table class="sadrzaj" cellspacing="0">
+              <tr> 
+                <td id="centerCcolumn" colspan="2"> 
+                  <!-- Start center-center blocks loop -->
+                  <{foreach item=block from=$xoops_ccblocks}> <table align="center" cellpadding="0" cellspacing="2">
+                    <tr> 
+                      <td> <div class="blockTitle"><{$block.title}></div>
+                        <div class="blockContent"><{$block.content}></div></td>
+                    </tr>
+                  </table>
+                  <{/foreach}> 
+                  <!-- End center-center blocks loop -->
+                </td>
+              </tr>
+              <tr> 
+                <td id="centerLcolumn"> 
+                  <!-- Start center-left blocks loop -->
+                  <{foreach item=block from=$xoops_clblocks}> <table class="blok" align="center" cellpadding="3" cellspacing="2">
+                    <tr> 
+                      <td> <div class="blockTitle"><{$block.title}></div>
+                        <div class="blockContent"><{$block.content}></div></td>
+                    </tr>
+                  </table>
+                  <{/foreach}> 
+                  <!-- End center-left blocks loop -->
+                </td>
+                <td id="centerRcolumn"> 
+                  <!-- Start center-right blocks loop -->
+                  <{foreach item=block from=$xoops_crblocks}> <table class="blok" align="center" cellpadding="3" cellspacing="2">
+                    <tr> 
+                      <td> <div class="blockTitle"><{$block.title}></div>
+                        <div class="blockContent"><{$block.content}></div></td>
+                    </tr>
+                  </table>
+                  <{/foreach}> 
+                  <!-- End center-right blocks loop -->
+                </td>
+              </tr>
+            </table>
+            <div align="left"><{/if}> 
+              <!-- End display center blocks -->
+            </div>
+            <div id="content"> 
+              <div align="left"><{$xoops_contents}> <br />
+                <{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or 
+                $xoBlocks.page_bottomcenter}> </div>
+              <table cellspacing="0">
+                <{if $xoBlocks.page_bottomcenter}> 
+                <tr> 
+                  <td id="bottomCcolumn" colspan="2"> <{foreach from=$xoBlocks.page_bottomcenter 
+                    item=block }> <table align="center" cellpadding="0" cellspacing="2">
+                      <tr> 
+                        <td> <div class="blockTitle"><{$block.title}></div>
+                          <div class="blockContent"><{$block.content}></div></td>
+                      </tr>
+                    </table>
+                    <{/foreach}> </td>
+                </tr>
+                <{/if}> <{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright}> 
+                <tr> 
+                  <td id="bottomLcolumn"> <p><{foreach from=$xoBlocks.page_bottomleft 
+                      item=block}></p>
+                    <table class="blok" align="center" cellpadding="3" cellspacing="2">
+                      <tr> 
+                        <td> <div class="blockTitle"><{$block.title}></div>
+                          <div class="blockContent"><{$block.content}></div></td>
+                      </tr>
+                    </table>
+                    <p><{/foreach}> </p></td>
+                  <td id="bottomRcolumn"> <p><{foreach from=$xoBlocks.page_bottomright 
+                      item=block}></p>
+                    <table class="blok" align="center" cellpadding="3" cellspacing="2">
+                      <tr> 
+                        <td> <div class="blockTitle"><{$block.title}></div>
+                          <div class="blockContent"><{$block.content}></div></td>
+                      </tr>
+                    </table>
+                    <p><{/foreach}> </p></td>
+                </tr>
+                <{/if}> 
+              </table>
+              <{/if}> </div></td>
+          <{if $xoops_showrblock == 1}> 
+          <td width="187" rowspan="2" id="rightcolumn"> 
+            <!-- Start right blocks loop -->
+            <{foreach item=block from=$xoops_rblocks}> 
+            <div class="<{cycle values="blockTitle,blockTitle"}>"><{$block.title}></div>
+            <div class="blockContent"><{$block.content}></div>
+           <img src="<{$xoops_imageurl}>images/160.gif" width="160" height="1" alt="" />
+              <{/foreach}> 
+              <!-- End right blocks loop -->
+          </td>
+          <{/if}> </tr>
+        <tr>
+          <td align="center" valign="top" id="centercolumn"><hr />
+            <{$xoops_banner}><br />
+            <img src="<{$xoops_imageurl}>images/bmark.gif" alt="favorites" />&nbsp;<a href="javascript:addbookmark()">Onodenje 
+            u favorites </a> <img src="<{$xoops_imageurl}>images/home.gif" alt="home page" />&nbsp;<a onclick="this.style.behavior='url(#default#homepage)';&#10;this.setHomePage('<{$xoops_url}>');" 
+                        href="<{$xoops_url}>#">Onodenje za home page</a> <img src="<{$xoops_imageurl}>images/stats.gif" alt="statistika" /> 
+            stranica se onodila za: <{php}>echo round(($GLOBALS['xoopsLogger']->dumpTime()), 
+            3)." sek."; <{/php}> <br /> <{$xoops_footer}></td>
+        </tr>
+        <tr> 
+          <td height="2" colspan="4"></td>
+        </tr>
+      </table> </td>
+  </tr>
+</table>
+<img src="<{$xoops_imageurl}>images/bgkraj.jpg" alt="bocna slika" width="108" height="496" /> 
+</body>
+</html>
